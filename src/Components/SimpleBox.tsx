@@ -39,7 +39,7 @@ export const SimpleBox = ({
 
   return (
     <motion.div
-      className={`h-[300px] w-[300px]  ${
+      className={`h-[150px] w-[150px]  ${
         selected ? "bg-red-500" : "bg-teal-500"
       } align mx-[50px] my-2 flex items-center justify-center`}
       style={{ x: randX }}
