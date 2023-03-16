@@ -1,3 +1,4 @@
+import { Signal } from "@preact/signals-react";
 import { motion, useMotionValue, animate, useTransform } from "framer-motion";
 import { useEffect } from "react";
 
@@ -11,7 +12,7 @@ export const SimpleBox = ({
   selected,
 }: {
   id?: number;
-  value?: number;
+  value?: number | Signal<number>;
   selected?: boolean;
 }) => {
   const x = useMotionValue(0);
@@ -44,7 +45,9 @@ export const SimpleBox = ({
       } align mx-[50px] my-2 flex items-center justify-center`}
       style={{ x: randX }}
     >
-      <b>ID {id}</b>: {value}
+      <>
+        <b>ID {id}</b>: {value}
+      </>
     </motion.div>
   );
 };

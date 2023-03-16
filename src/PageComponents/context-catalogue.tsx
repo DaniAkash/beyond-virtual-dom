@@ -17,7 +17,7 @@ const AnimatedBox = ({ id }: { id: number }) => {
   return <SimpleBox id={id} />;
 };
 
-export const BoxCatalogue = () => {
+export const ContextCatalogue = () => {
   const [id, setId] = useState(0);
   const [value, setValue] = useState(0);
 
