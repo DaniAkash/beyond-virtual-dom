@@ -51,7 +51,7 @@ export const BlockCounter = () => {
   }, [clickTime]);
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       {clickCount ? (
         <>
           Took: {renderTime}s

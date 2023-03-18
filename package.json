@@ -12,6 +12,8 @@
   "dependencies": {
     "@astrojs/react": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
     "@preact/signals-react": "^1.2.2",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",

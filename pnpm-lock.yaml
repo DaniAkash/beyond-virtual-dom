@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/react': ^2.1.0
   '@astrojs/tailwind': ^3.1.1
+  '@headlessui/react': ^1.7.13
+  '@heroicons/react': ^2.0.16
   '@preact/signals-react': ^1.2.2
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
@@ -14,13 +16,14 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.4
   react: ^18.0.0
   react-dom: ^18.0.0
-  react-lag-radar: ^1.0.0
   tailwindcss: ^3.0.24
   zustand: ^4.3.6
 
 dependencies:
   '@astrojs/react': 2.1.0_3xleytyzprlgycb2ded54tx72i
   '@astrojs/tailwind': 3.1.1_2l4ywwlgzw2satesmi43zum3jy
+  '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
+  '@heroicons/react': 2.0.16_react@18.2.0
   '@preact/signals-react': 1.2.2_react@18.2.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -29,7 +32,6 @@ dependencies:
   million: 2.0.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-lag-radar: 1.0.0_react@18.2.0
   tailwindcss: 3.2.7
   zustand: 4.3.6_react@18.2.0
 
@@ -619,8 +621,24 @@ packages:
     dev: false
     optional: true
 
-  /@gaearon/lag-radar/0.1.0:
-    resolution: {integrity: sha512-gRBjSuEG6HuyoXhy+yedPXlcGKyUNMlNpgKTncgfXwIi6ejt/0KuqOzck/geYqy8z02fuJrz1VjkF4EwH2Oq8g==}
+  /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.16_react@18.2.0:
+    resolution: {integrity: sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
@@ -1161,6 +1179,10 @@ packages:
   /cli-spinners/2.7.0:
     resolution: {integrity: sha512-qu3pN8Y3qHNgE2AFweciB1IfMnmZ/fsNTEE+NOFjmGB2F/7rLhnhzppvpCnN4FovtP26k8lHyy9ptEbNwWFLzw==}
     engines: {node: '>=6'}
+    dev: false
+
+  /client-only/0.0.1:
+    resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
     dev: false
 
   /clone/1.0.4:
@@ -2704,15 +2726,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-lag-radar/1.0.0_react@18.2.0:
-    resolution: {integrity: sha512-3Pv3B3PuMgFgnakXBrVGYPt0eOHQX+zwcImXSKI9CcF2RDw7VUImr5yb+F1hNl35niL7HSF1wAsMko6I4bO7LQ==}
-    peerDependencies:
-      react: '*'
-    dependencies:
-      '@gaearon/lag-radar': 0.1.0
-      react: 18.2.0
     dev: false
 
   /react/18.2.0:

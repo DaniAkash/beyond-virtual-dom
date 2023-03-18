@@ -1,4 +1,8 @@
 ---
+import { NavBar } from "../Components/NavBar";
+
+const url = Astro.url;
+const activeUrl = url.pathname;
 ---
 
 <html lang="en">
@@ -9,6 +13,7 @@
     <title>Beyond Virtual DOM</title>
   </head>
   <body>
+    <NavBar activeUrl={activeUrl} client:load />
     <slot />
   </body>
 </html>

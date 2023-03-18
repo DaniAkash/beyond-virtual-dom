@@ -8,6 +8,9 @@ export const Home = () => {
 
   return (
     <div className="flex h-[100vh] w-[100vw] flex-col items-center justify-center">
+      <p>
+        A Simple Box with animation that we will be using in this session...
+      </p>
       <span>Value of the content</span>
       <input
         type="range"
