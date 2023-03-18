@@ -3,12 +3,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <link rel="stylesheet" href="../../node_modules/reveal.js/dist/reveal.css" />
   <link
     rel="stylesheet"
-    href="../../node_modules/reveal.js/dist/theme/black.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css"
+    integrity="sha512-A5PKBHoJQHdKjxpwyV+VhMsK7L3MMV1Ch2++rS0bn3xX8+5qJb3WpPvwJH1eqb6iMRtotfiOO7Jhl1qQ02Rwuw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css"
+    integrity="sha512-DKeDMgkMDBNgY3g8T6H6Ft5cB7St0LOh5d69BvETIcTrP0E3d3KhANTMs5QOTMnenXy6JVKz/tENmffCLeXPiQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <div class="reveal">
     <div class="slides">
       <section>Beyond Virtual DOM</section>
@@ -66,20 +74,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </section>
     </div>
   </div>
-  <script src="../../node_modules/reveal.js/dist/reveal.js"></script>
-  <script src="../../node_modules/reveal.js/plugin/notes/notes.js"></script>
-  <script src="../../node_modules/reveal.js/plugin/markdown/markdown.js"
+  <script src="https://unpkg.com/reveal.js@4.4.0/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.4.0/plugin/notes/notes.js"
   ></script>
-  <script src="../../node_modules/reveal.js/plugin/highlight/highlight.js"
+  <script src="https://unpkg.com/reveal.js@4.4.0/plugin/markdown/markdown.js"
+  ></script>
+  <script src="https://unpkg.com/reveal.js@4.4.0/plugin/highlight/highlight.js"
   ></script>
   <script>
-    setTimeout(() => {
+    window.addEventListener("load", function () {
       Reveal.initialize({
         hash: true,
         progress: false,
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
-    }, 100);
+    });
   </script>
 </BaseLayout>
