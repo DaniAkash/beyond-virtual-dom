@@ -1,4 +1,5 @@
 import { useState, startTransition, useEffect } from "react";
+import useInterval from "../hooks/useInterval";
 
 function Display({
   count,
@@ -35,6 +36,19 @@ export const VCounter = () => {
   const [renderTime, setRenderTime] = useState(Date.now());
   const [averageTime, setAverageTime] = useState(0);
   const [clickCount, setClickCount] = useState(0);
+  const [isPlaying, setPlaying] = useState<boolean>(false);
+
+  useInterval(
+    () => {
+      startTransition(() => {
+        setCount(count + 1);
+        setClickTime(Date.now());
+        setClickCount(clickCount + 1);
+      });
+    },
+    // Delay in milliseconds or null to stop it
+    isPlaying ? 500 : null
+  );
 
   useEffect(() => {
     const currentRenderTime = (Date.now() - clickTime) / 1000;
@@ -63,14 +77,10 @@ export const VCounter = () => {
       <br />
       <button
         onClick={() => {
-          startTransition(() => {
-            setCount(count + 1);
-            setClickTime(Date.now());
-            setClickCount(clickCount + 1);
-          });
+          setPlaying((prev) => !prev);
         }}
       >
-        Increment
+        {isPlaying ? "Stop" : "Start"} Timer
       </button>
       <br />
       <br />
