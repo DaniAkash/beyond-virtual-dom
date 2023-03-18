@@ -1,6 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, LinkIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { base } from "../../astro.config.mjs";
+import { base } from "../../base";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
