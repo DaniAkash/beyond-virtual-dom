@@ -7,7 +7,16 @@ function classNames(...classes) {
 
 export const NavBar = ({ activeUrl }: { activeUrl: string }) => {
   const navigation = [
-    { name: "Home", href: "/", current: activeUrl === "/" },
+    {
+      name: "Slides",
+      href: "/",
+      current: activeUrl === "/",
+    },
+    {
+      name: "Box",
+      href: "/box-animation",
+      current: activeUrl === "/box-animation",
+    },
     { name: "Context", href: "/context", current: activeUrl === "/context" },
     { name: "Zustand", href: "/zustand", current: activeUrl === "/zustand" },
     { name: "Signal", href: "/signal", current: activeUrl === "/signal" },
@@ -49,7 +58,11 @@ export const NavBar = ({ activeUrl }: { activeUrl: string }) => {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-transparent hover:bg-gray-700 hover:text-white",
+                            : `text-transparent ${
+                                ["Slides", "Home"].includes(item.name)
+                                  ? "text-gray-100"
+                                  : ""
+                              } hover:bg-gray-700 hover:text-white`,
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}

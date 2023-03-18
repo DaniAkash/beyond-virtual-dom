@@ -1,8 +1,85 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Home } from "../PageComponents/home";
 ---
 
 <BaseLayout>
-  <Home client:load />
+  <link rel="stylesheet" href="../../node_modules/reveal.js/dist/reveal.css" />
+  <link
+    rel="stylesheet"
+    href="../../node_modules/reveal.js/dist/theme/black.css"
+  />
+
+  <div class="reveal">
+    <div class="slides">
+      <section>Beyond Virtual DOM</section>
+      <section>
+        <p>Previously</p>
+        <ul>
+          <li>ISlands Architecture 🏝️</li>
+          <li>SSR on the Edge 🌏</li>
+        </ul>
+      </section>
+      <section>
+        <p>What is Virtual DOM?</p>
+        <span class="text-base"
+          >Ref: https://blog.logrocket.com/virtual-dom-react/</span
+        >
+      </section>
+      <section>
+        <p>Virtual DOM is fast for most cases</p>
+        <p>Until, you start noticing the problem</p>
+        <span class="text-base"
+          >Ref: https://svelte.dev/blog/virtual-dom-is-pure-overhead</span
+        >
+      </section>
+      <section>Understading React DOM renders</section>
+      <section>Better Virtual DOM Libraries</section>
+      <section>
+        <p>Links to stuff used in this talk</p>
+        <ul>
+          <li><a href="https://astro.build/">Astro</a></li>
+          <li><a href="https://revealjs.com/">Reveal.js</a></li>
+          <li>
+            <a href="https://legacy.reactjs.org/docs/context.html"
+              >React Context</a
+            >
+          </li>
+          <li><a href="https://github.com/pmndrs/zustand">Zustand</a></li>
+          <li>
+            <a
+              href="https://github.com/preactjs/signals/tree/main/packages/react"
+              >Signals</a
+            >
+          </li>
+          <li><a href="https://github.com/ged-odoo/blockdom">blockdom</a></li>
+          <li><a href="https://millionjs.org/">Million</a></li>
+          <li><a href="https://github.com/mobz/lag-radar">LagRadar</a></li>
+        </ul>
+      </section>
+      <section>
+        <p>Connect with me on Twitter</p>
+        <a href="https://twitter.com/dani_akash_">@dani_akash_</a>
+        <br />
+        <br />
+        <br />
+        <a href="https://daniakash.com">daniakash.com</a>
+      </section>
+    </div>
+  </div>
+  <script src="../../node_modules/reveal.js/dist/reveal.js"></script>
+  <script src="../../node_modules/reveal.js/plugin/notes/notes.js"></script>
+  <script src="../../node_modules/reveal.js/plugin/markdown/markdown.js"
+  ></script>
+  <script src="../../node_modules/reveal.js/plugin/highlight/highlight.js"
+  ></script>
+  <script>
+    setTimeout(() => {
+      Reveal.initialize({
+        hash: true,
+        progress: false,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    }, 100);
+  </script>
 </BaseLayout>

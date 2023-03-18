@@ -16,6 +16,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.4
   react: ^18.0.0
   react-dom: ^18.0.0
+  reveal.js: ^4.4.0
   tailwindcss: ^3.0.24
   zustand: ^4.3.6
 
@@ -32,6 +33,7 @@ dependencies:
   million: 2.0.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  reveal.js: 4.4.0
   tailwindcss: 3.2.7
   zustand: 4.3.6_react@18.2.0
 
@@ -2885,6 +2887,11 @@ packages:
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: false
+
+  /reveal.js/4.4.0:
+    resolution: {integrity: sha512-jIV6C9V2NEUjGzU8L6dUFGpk1KJmq7/EzP2fOW67ggc2c0Cp/PdprWxZ9Qgp46F0T2ZWDCjQ1p3Ytzy5jA6a2w==}
+    engines: {node: '>=10.0.0'}
     dev: false
 
   /rollup/3.19.1:
