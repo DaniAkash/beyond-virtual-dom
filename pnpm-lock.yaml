@@ -16,6 +16,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.4
   react: ^18.0.0
   react-dom: ^18.0.0
+  react-lag-radar: ^1.0.0
   tailwindcss: ^3.0.24
   usehooks-ts: ^2.9.1
   zustand: ^4.3.6
@@ -33,6 +34,7 @@ dependencies:
   million: 2.0.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-lag-radar: 1.0.0_react@18.2.0
   tailwindcss: 3.2.7
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
   zustand: 4.3.6_react@18.2.0
@@ -622,6 +624,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@gaearon/lag-radar/0.1.0:
+    resolution: {integrity: sha512-gRBjSuEG6HuyoXhy+yedPXlcGKyUNMlNpgKTncgfXwIi6ejt/0KuqOzck/geYqy8z02fuJrz1VjkF4EwH2Oq8g==}
+    dev: false
 
   /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
@@ -2728,6 +2734,15 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-lag-radar/1.0.0_react@18.2.0:
+    resolution: {integrity: sha512-3Pv3B3PuMgFgnakXBrVGYPt0eOHQX+zwcImXSKI9CcF2RDw7VUImr5yb+F1hNl35niL7HSF1wAsMko6I4bO7LQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      '@gaearon/lag-radar': 0.1.0
+      react: 18.2.0
     dev: false
 
   /react/18.2.0:

@@ -1,7 +1,8 @@
 import { useState, startTransition, useEffect } from "react";
 // @ts-ignore
 import { block } from "million/react";
-import useInterval from "../hooks/useInterval";
+import LagRadar from "react-lag-radar";
+import { useInterval } from "usehooks-ts";
 
 function Display({
   count,
@@ -66,6 +67,8 @@ export const BlockCounter = () => {
 
   return (
     <div className="flex flex-col items-center">
+      <LagRadar size={100} />
+
       {clickCount ? (
         <>
           Took: {renderTime}s
