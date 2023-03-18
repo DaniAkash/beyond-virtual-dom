@@ -11,37 +11,37 @@ export const NavBar = ({ activeUrl }: { activeUrl: string }) => {
     {
       name: "Slides",
       href: base,
-      current: activeUrl === base,
+      current: activeUrl === base + "/",
     },
     {
       name: "Box",
       href: base + "/box-animation",
-      current: activeUrl === base + "/box-animation",
+      current: activeUrl === base + "/box-animation/",
     },
     {
       name: "Context",
       href: base + "/context",
-      current: activeUrl === base + "/context",
+      current: activeUrl === base + "/context/",
     },
     {
       name: "Zustand",
       href: base + "/zustand",
-      current: activeUrl === base + "/zustand",
+      current: activeUrl === base + "/zustand/",
     },
     {
       name: "Signal",
       href: base + "/signal",
-      current: activeUrl === base + "/signal",
+      current: activeUrl === base + "/signal/",
     },
     {
       name: "Virtual DOM",
       href: base + "/virtual-dom",
-      current: activeUrl === base + "/virtual-dom",
+      current: activeUrl === base + "/virtual-dom/",
     },
     {
       name: "Million",
       href: base + "/million",
-      current: activeUrl === base + "/million",
+      current: activeUrl === base + "/million/",
     },
   ];
 
@@ -76,7 +76,7 @@ export const NavBar = ({ activeUrl }: { activeUrl: string }) => {
                           item.current
                             ? "bg-gray-900 text-white"
                             : `text-transparent ${
-                                ["Slides", "Home"].includes(item.name)
+                                ["Slides"].includes(item.name)
                                   ? "text-gray-100"
                                   : ""
                               } hover:bg-gray-700 hover:text-white`,
