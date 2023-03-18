@@ -1,5 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, LinkIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { base } from "../../astro.config.mjs";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -9,23 +10,39 @@ export const NavBar = ({ activeUrl }: { activeUrl: string }) => {
   const navigation = [
     {
       name: "Slides",
-      href: "/",
-      current: activeUrl === "/",
+      href: base,
+      current: activeUrl === base,
     },
     {
       name: "Box",
-      href: "/box-animation",
-      current: activeUrl === "/box-animation",
+      href: base + "/box-animation",
+      current: activeUrl === base + "/box-animation",
     },
-    { name: "Context", href: "/context", current: activeUrl === "/context" },
-    { name: "Zustand", href: "/zustand", current: activeUrl === "/zustand" },
-    { name: "Signal", href: "/signal", current: activeUrl === "/signal" },
+    {
+      name: "Context",
+      href: base + "/context",
+      current: activeUrl === base + "/context",
+    },
+    {
+      name: "Zustand",
+      href: base + "/zustand",
+      current: activeUrl === base + "/zustand",
+    },
+    {
+      name: "Signal",
+      href: base + "/signal",
+      current: activeUrl === base + "/signal",
+    },
     {
       name: "Virtual DOM",
-      href: "/virtual-dom",
-      current: activeUrl === "/virtual-dom",
+      href: base + "/virtual-dom",
+      current: activeUrl === base + "/virtual-dom",
     },
-    { name: "Million", href: "/million", current: activeUrl === "/million" },
+    {
+      name: "Million",
+      href: base + "/million",
+      current: activeUrl === base + "/million",
+    },
   ];
 
   return (
