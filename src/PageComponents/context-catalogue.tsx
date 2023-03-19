@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from "react";
-import { SimpleBox } from "../Components/SimpleBox";
+import { createContext, useContext, useMemo, memo, useState } from "react";
+import { AnimateBox } from "../Components/AnimateBox";
 
 const SelectedBoxContext = createContext({
   id: 0,
@@ -8,13 +8,28 @@ const SelectedBoxContext = createContext({
   setValue: (value: number) => null,
 });
 
-const AnimatedBox = ({ id }: { id: number }) => {
-  const { id: selectedID, value } = useContext(SelectedBoxContext);
+function Text() {
+  const { id, value } = useContext(SelectedBoxContext);
+  return (
+    <>
+      ID: {id}: {value}
+    </>
+  );
+}
 
-  if (selectedID === id) {
-    return <SimpleBox id={id} selected={true} value={value} />;
-  }
-  return <SimpleBox id={id} />;
+const AnimatedBox = ({ id }: { id: number }) => {
+  const { id: selectedID } = useContext(SelectedBoxContext);
+
+  const text = useMemo(
+    () => (selectedID === id ? <Text /> : <>ID: {id}</>),
+    [id, selectedID]
+  );
+
+  return (
+    <AnimateBox id={id} selected={id === selectedID}>
+      {text}
+    </AnimateBox>
+  );
 };
 
 export const ContextCatalogue = () => {
@@ -45,6 +60,7 @@ export const ContextCatalogue = () => {
           <div>
             <span className="mr-3">Selected ID:</span>
             <input
+              className="border-2 border-black"
               type={"text"}
               value={id}
               onChange={(e) => setId(parseInt(e.target.value, 10))}
