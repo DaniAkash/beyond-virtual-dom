@@ -10,38 +10,28 @@ export const NavBar = ({ activeUrl }: { activeUrl: string }) => {
   const navigation = [
     {
       name: "Slides",
-      href: base,
-      current: activeUrl === base + "/",
+      href: "/",
+      current: activeUrl === "/",
     },
     {
       name: "Box",
-      href: base + "/box-animation",
-      current: activeUrl === base + "/box-animation/",
+      href: "/box-animation",
+      current: activeUrl === "/box-animation/",
     },
     {
       name: "Context",
-      href: base + "/context",
-      current: activeUrl === base + "/context/",
+      href: "/context",
+      current: activeUrl === "/context/",
     },
     {
       name: "Zustand",
-      href: base + "/zustand",
-      current: activeUrl === base + "/zustand/",
+      href: "/zustand",
+      current: activeUrl === "/zustand/",
     },
     {
       name: "Signal",
-      href: base + "/signal",
-      current: activeUrl === base + "/signal/",
-    },
-    {
-      name: "Virtual DOM",
-      href: base + "/virtual-dom",
-      current: activeUrl === base + "/virtual-dom/",
-    },
-    {
-      name: "Million",
-      href: base + "/million",
-      current: activeUrl === base + "/million/",
+      href: "/signal",
+      current: activeUrl === "/signal/",
     },
   ];
 
